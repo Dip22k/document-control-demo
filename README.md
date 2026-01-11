@@ -4,7 +4,6 @@
     <meta charset="UTF-8">
     <title>Proposal & Document Management Demo</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <style>
         :root {
             --primary: #2563eb;
@@ -14,38 +13,31 @@
             --light: #f3f4f6;
             --dark: #111827;
         }
-
         * {
             box-sizing: border-box;
             font-family: Arial, sans-serif;
         }
-
         body {
             margin: 0;
             background: #f9fafb;
         }
-
         h2, h3, h4 {
             margin: 0;
         }
-
         /* Layout */
         .app {
             display: flex;
             min-height: 100vh;
         }
-
         .sidebar {
             width: 240px;
             background: var(--dark);
             color: #fff;
             padding: 1rem;
         }
-
         .sidebar h3 {
             margin-bottom: 1rem;
         }
-
         .sidebar-menu a {
             display: block;
             padding: 0.6rem;
@@ -55,26 +47,21 @@
             margin-bottom: 0.3rem;
             cursor: pointer;
         }
-
         .sidebar-menu a.active,
         .sidebar-menu a:hover {
             background: #1f2937;
             color: #fff;
         }
-
         .content {
             flex: 1;
             padding: 1.5rem;
         }
-
         .page {
             display: none;
         }
-
         .page.active {
             display: block;
         }
-
         /* Cards */
         .card {
             background: #fff;
@@ -82,7 +69,6 @@
             margin-top: 1rem;
             box-shadow: 0 1px 4px rgba(0,0,0,0.08);
         }
-
         .card-header {
             padding: 1rem;
             border-bottom: 1px solid #e5e7eb;
@@ -90,11 +76,9 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .card-body {
             padding: 1rem;
         }
-
         /* Buttons */
         .btn-sm {
             padding: 0.35rem 0.7rem;
@@ -103,17 +87,14 @@
             cursor: pointer;
             font-size: 0.85rem;
         }
-
         .btn-view {
             background: var(--primary);
             color: #fff;
         }
-
         .btn-approve {
             background: var(--success);
             color: #fff;
         }
-
         .btn-upload {
             background: var(--primary);
             color: #fff;
@@ -122,23 +103,19 @@
             border: none;
             cursor: pointer;
         }
-
         /* Table */
         table {
             width: 100%;
             border-collapse: collapse;
         }
-
         th, td {
             padding: 0.6rem;
             border-bottom: 1px solid #e5e7eb;
             text-align: left;
         }
-
         th {
             background: var(--light);
         }
-
         /* Status */
         .status-badge {
             padding: 0.2rem 0.5rem;
@@ -146,18 +123,15 @@
             font-size: 0.75rem;
             color: #fff;
         }
-
         .status-approved { background: var(--success); }
         .status-review { background: var(--warning); }
         .status-draft { background: #6b7280; }
         .status-final { background: var(--primary); }
-
         /* Document List */
         .doc-list {
             list-style: none;
             padding: 0;
         }
-
         .doc-item {
             display: flex;
             justify-content: space-between;
@@ -168,17 +142,14 @@
             margin-bottom: 0.6rem;
             box-shadow: 0 1px 3px rgba(0,0,0,0.08);
         }
-
         .doc-info {
             display: flex;
             gap: 0.75rem;
             align-items: center;
         }
-
         .doc-icon {
             font-size: 1.5rem;
         }
-
         /* Modal */
         .modal {
             position: fixed;
@@ -189,11 +160,9 @@
             align-items: center;
             z-index: 999;
         }
-
         .modal.active {
             display: flex;
         }
-
         .modal-content {
             background: #fff;
             width: 90%;
@@ -201,7 +170,6 @@
             border-radius: 10px;
             overflow: hidden;
         }
-
         .modal-header {
             padding: 1rem;
             background: var(--light);
@@ -209,39 +177,32 @@
             justify-content: space-between;
             align-items: center;
         }
-
         .modal-body {
             padding: 1rem;
         }
-
         .btn-close {
             background: none;
             border: none;
             font-size: 1.5rem;
             cursor: pointer;
         }
-
         .form-group {
             margin-bottom: 0.75rem;
         }
-
         .form-group label {
             display: block;
             margin-bottom: 0.3rem;
             font-size: 0.85rem;
         }
-
         input, select, textarea {
             width: 100%;
             padding: 0.45rem;
             border-radius: 6px;
             border: 1px solid #d1d5db;
         }
-
         textarea {
             resize: vertical;
         }
-
         .file-upload-area {
             border: 2px dashed #c7d2fe;
             padding: 1rem;
@@ -263,7 +224,6 @@
             <a onclick="showPage('proposals', event)">Proposals</a>
         </div>
     </div>
-
     <div class="content">
         <!-- Documents -->
         <div id="documents" class="page active">
@@ -283,17 +243,14 @@
                 </li>
             </ul>
         </div>
-
         <!-- Proposals -->
         <div id="proposals" class="page">
             <h2>Design Proposals</h2>
-
             <div class="card">
                 <div class="card-header">
                     <h3>Active Proposals</h3>
                     <button class="btn-sm btn-approve" onclick="openModal('createProposal')">+ Create</button>
                 </div>
-
                 <div class="card-body">
                     <table>
                         <thead>
